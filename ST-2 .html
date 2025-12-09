@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Responsive grid layout</title>
+<style>
+#main{
+height:25px;
+text-align : center;
+background-color:red;
+font-size : larger;
+}
+.content{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     gap: 10px;
+     background-color:orange;
+}
+#footer{
+height : 25px;
+text-align : center;
+background-color:grey;
+font-size : larger;
+}
+</style>
+</head>
+<body>
+<main>
+<div id="main">Header</div>
+<div class="content">
+    <div id="box"><h2>1</h2></div>
+    <div id="box"><h2>2</h2></div>
+    <div id="box"><h2>3</h2></div>
+    <div id="box"><h2>4</h2></div>
+    <div id="box"><h2>5</h2></div>
+    <div id="box"><h2>6</h2></div>
+    <div id="box"><h2>7</h2></div>
+    <div id="box"><h2>8</h2></div>
+    <div id="box"><h2>9</h2></div>
+</div>
+<div id="footer">Footer<div>
+</main>
+</body>
+</html>
