@@ -418,3 +418,491 @@ padding: 15px;
 #mandate{
     width: 400px;
 }
+
+/* =========================================================
+   RESPONSIVE / MEDIA QUERIES
+   Added to make the page adapt across tablet & mobile screens.
+   Strategy: above ~993px nothing changes (original desktop look).
+   Below that, flex rows stack into columns, fixed pixel widths
+   become fluid (%/max-width), and font sizes scale down.
+   ========================================================= */
+
+/* Make all images fluid by default so fixed inline widths don't
+   force horizontal scrolling on small screens */
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- TABLET: <= 992px ---------- */
+@media (max-width: 992px){
+    #nav{
+        flex-wrap: wrap;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    #LIS{
+        padding-left: 10px;
+        width: 100%;
+    }
+    ul li{
+        padding-right: 25px;
+        font-size: 14px;
+    }
+    #image{
+        padding-right: 30px;
+    }
+    #msg{
+        font-size: 22px;
+    }
+
+    .glance{
+        flex-direction: column;
+        height: auto;
+    }
+    #left, #right{
+        width: 100%;
+        padding-top: 20px;
+        font-size: 32px;
+    }
+    #right{
+        font-size: 18px;
+        padding: 20px 30px;
+    }
+
+    table.tb1{
+        padding: 20px;
+    }
+    .tb1{
+        height: auto;
+        font-size: large;
+        padding-left: 20px;
+        display: block;
+    }
+    .tb1 tr{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .tb1 td{
+        padding: 10px 0;
+    }
+    span{
+        font-size: x-large;
+    }
+
+    .about{
+        height: auto;
+        padding-bottom: 40px;
+    }
+    #about1{
+        font-size: 30px;
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+    hr{
+        width: 90%;
+        max-width: 600px;
+    }
+    #aboutcontent{
+        flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #leftcontent{
+        width: 100%;
+        height: auto;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    #aboutimg{
+        padding-left: 0;
+        padding-top: 30px;
+        text-align: center;
+    }
+    #aboutimg img{
+        width: 80%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    #affi{
+        font-size: 32px;
+        padding-left: 30px;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .affiimg1{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 0;
+        height: auto;
+        gap: 20px;
+    }
+    #aktu{
+        width: 150px;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .coures{
+        height: auto;
+    }
+    #courseoff{
+        font-size: 32px;
+        padding-left: 30px;
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    #ug{
+        font-size: 22px;
+        padding-left: 30px;
+        height: auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    #ug span{
+        font-size: 24px !important;
+        display: block;
+        margin-bottom: 10px;
+    }
+    #ugpg{
+        padding-left: 30px;
+        overflow-x: auto;
+        display: block;
+        width: 100%;
+    }
+    #ugpg, table#ugpg{
+        font-size: 14px;
+    }
+
+    #explore{
+        font-size: 28px;
+        padding-left: 30px;
+        height: auto;
+        padding-top: 30px;
+    }
+    #expimgtop{
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        padding-left: 30px;
+        justify-content: center;
+        gap: 20px;
+    }
+    #exploreimage{
+        width: 45%;
+        max-width: 280px;
+        height: auto;
+        margin-right: 0;
+    }
+    #exploreimage img{
+        width: 100%;
+        height: auto;
+    }
+
+    #achive{
+        font-size: 32px;
+        padding-left: 30px;
+        height: auto;
+        padding-top: 30px;
+    }
+    #achive1{
+        padding-left: 30px;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    #achive1 img{
+        margin-right: 0 !important;
+        width: 45% !important;
+        max-width: 280px;
+    }
+    #achive2{
+        padding-left: 30px;
+        text-align: center;
+    }
+    #achive2 img{
+        width: 80% !important;
+        max-width: 320px;
+    }
+
+    #recuit{
+        font-size: 32px;
+        padding-left: 30px;
+        height: auto;
+    }
+
+    .glimpses{
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 30px;
+    }
+    #glimpses1{
+        padding-top: 30px;
+        font-size: 32px;
+        padding-left: 30px;
+    }
+    #glimpses2 img{
+        width: 90% !important;
+        padding-left: 0 !important;
+        padding-top: 20px !important;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #activity{
+        flex-direction: column;
+        height: auto;
+    }
+    #activity1{
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        box-sizing: border-box;
+    }
+    #activity1 span{
+        font-size: 32px !important;
+    }
+    #activity2{
+        padding-left: 30px;
+        padding-top: 30px;
+        text-align: center;
+    }
+    #activity2 img{
+        width: 90% !important;
+    }
+
+    .apj{
+        flex-direction: column;
+        height: auto;
+    }
+    #apj1{
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        box-sizing: border-box;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    #apj2{
+        padding-left: 30px;
+        padding-top: 20px;
+        text-align: center;
+    }
+    #apj2 img{
+        width: 90% !important;
+    }
+
+    .nation{
+        height: auto;
+    }
+    #nation1{
+        flex-direction: column;
+    }
+    #serve{
+        padding-left: 30px;
+        padding-top: 30px;
+        font-size: 32px;
+        width: 100%;
+    }
+    #tyagi{
+        padding-left: 30px;
+        padding-top: 20px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    #tyagi br{
+        display: none;
+    }
+    #nation2{
+        padding-left: 30px;
+        text-align: center;
+    }
+    #nation2 hr{
+        width: 90% !important;
+    }
+    #nation2 img{
+        width: 90% !important;
+    }
+
+    .testimonials{
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    #test1, #test2, #test3{
+        width: 90%;
+        max-width: 420px;
+        height: auto;
+        padding-left: 0;
+        margin-bottom: 30px;
+    }
+    #test1img img, #tset2img img{
+        width: 100%;
+        height: auto;
+    }
+    #test1text, #test2text, #test3text{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #footer{
+        height: auto;
+        display: block;
+    }
+    #footer, #footer table{
+        width: 100%;
+    }
+    #mandate{
+        width: 100%;
+    }
+}
+
+/* ---------- MOBILE: <= 600px ---------- */
+@media (max-width: 600px){
+    #nav{
+        padding-left: 10px;
+    }
+    ul li{
+        padding-right: 14px;
+        font-size: 12px;
+    }
+    a{
+        font-size: medium;
+    }
+    #msg{
+        font-size: 16px;
+    }
+
+    #left{
+        font-size: 24px;
+    }
+    #right{
+        font-size: 15px;
+        padding: 15px 20px;
+    }
+
+    .tb1{
+        padding-left: 10px;
+        font-size: medium;
+    }
+
+    #about1{
+        font-size: 22px;
+        padding-left: 15px;
+    }
+    #aboutcontent{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #leftcontent{
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    #affi{
+        font-size: 22px;
+        padding-left: 15px;
+    }
+    #aktu{
+        width: 100px;
+    }
+
+    #courseoff{
+        font-size: 22px;
+        padding-left: 15px;
+    }
+    #ug{
+        padding-left: 15px;
+        font-size: 16px;
+    }
+    #ug span{
+        font-size: 18px !important;
+    }
+    #ugpg{
+        padding-left: 15px;
+    }
+
+    #explore{
+        font-size: 20px;
+        padding-left: 15px;
+    }
+    #expimgtop{
+        padding-left: 15px;
+    }
+    #exploreimage{
+        width: 100%;
+        max-width: 260px;
+    }
+
+    #achive{
+        font-size: 22px;
+        padding-left: 15px;
+    }
+    #achive1, #achive2{
+        padding-left: 15px;
+    }
+    #achive1 img{
+        width: 90% !important;
+    }
+
+    #recuit{
+        font-size: 22px;
+        padding-left: 15px;
+    }
+
+    #glimpses1{
+        font-size: 22px;
+        padding-left: 15px;
+    }
+
+    #activity1, #activity2{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #activity1 span{
+        font-size: 22px !important;
+    }
+
+    #apj1{
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    #apj2{
+        padding-left: 15px;
+    }
+
+    #serve{
+        font-size: 22px;
+        padding-left: 15px;
+    }
+    #tyagi{
+        padding-left: 15px;
+        font-size: 14px;
+    }
+    #nation2{
+        padding-left: 15px;
+    }
+
+    #test1, #test2, #test3{
+        width: 95%;
+    }
+    #test1text, #test2text, #test3text{
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    table#footer td span{
+        font-size: 22px !important;
+    }
+    table#footer table td{
+        font-size: 14px;
+    }
+}
